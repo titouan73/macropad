@@ -1,0 +1,15 @@
+/*
+Numpad AutoHotKey Script
+Author : M1tch
+*/
+
+; Media Keys 
+Numpad8:: Send "{Media_Prev}"
+Numpad9:: Send "{Media_Play_Pause}"
+NumpadSub:: Send "{Media_Next}"
+
+
+; Volume Keys
+NumpadDiv:: Send "{Volume_Down}"
+NumpadMult:: Send "{Volume_Mute}"
+NumpadClear:: Send "{Volume_Up}"
