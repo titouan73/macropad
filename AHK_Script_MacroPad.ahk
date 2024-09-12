@@ -1,6 +1,10 @@
 /*
 Numpad AutoHotKey Script
 Author : M1tch
+
+à déposer dans le dossier 
+C:\Users\<user>\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup
+si on veut le lancer au démarrage
 */
 
 ; Media Keys 
@@ -35,78 +39,97 @@ NumpadDiv:: {
     DllCall("LockWorkStation")
     }
 
-
-
-; Numpad 000 Key
-; https://www.autohotkey.com
-; This example script makes the special 000 key that appears on certain
-; keypads into an equals key.  You can change the action by replacing the
-; Send "=" line with line(s) of your choice.
-
-#MaxThreadsPerHotkey 5  ; Allow multiple threads for this hotkey.
-$Numpad0::
-{
-    #MaxThreadsPerHotkey 1
-    ; Above: Use the $ to force the hook to be used, which prevents anL
-    ; infinite loop since this subroutine itself sends Numpad0, which
-    ; would otherwise result in a recursive call to itself.
-    DelayBetweenKeys := 1 ; Adjust this value if it doesn't work.
-    if A_PriorHotkey = A_ThisHotkey
-    {
-        if A_TimeSincePriorHotkey < DelayBetweenKeys
-        {
-            if Numpad0Count = ""
-                Numpad0Count := 2 ; i.e. This one plus the prior one.
-            else if Numpad0Count = 0
-                Numpad0Count := 2
-            else
-            {
-                ; Since we're here, Numpad0Count must be 2 as set by
-                ; prior calls, which means this is the third time the
-                ; the key has been pressed. Thus, the hotkey sequence
-                ; should fire:
-                Numpad0Count := 0
-                Send "=" ; ******* This is the action for the 000 key
-            }
-            ; In all the above cases, we return without further action:
-            CalledReentrantly := true
-            return
-        }
-    }
-    ; Otherwise, this Numpad0 event is either the first in the series
-    ; or it happened too long after the first one (e.g. perhaps the
-    ; user is holding down the Numpad0 key to auto-repeat it, which
-    ; we want to allow).  Therefore, after a short delay -- during
-    ; which another Numpad0 hotkey event may re-entrantly call this
-    ; subroutine -- we'll send the key on through if no reentrant
-    ; calls occurred:
-    Numpad0Count := 0
-    CalledReentrantly := false
-    ; During this sleep, this subroutine may be reentrantly called
-    ; (i.e. a simultaneous "thread" which runs in parallel to the
-    ; call we're in now):
-    Sleep DelayBetweenKeys
-    if CalledReentrantly = true ; Another "thread" changed the value.
-    {
-        ; Since it was called reentrantly, this key event was the first in
-        ; the sequence so should be suppressed (hidden from the system):
-        CalledReentrantly := false
-        return
-    }
-    ; Otherwise it's not part of the sequence so we send it through normally.
-    ; In other words, the *real* Numpad0 key has been pressed, so we want it
-    ; to have its normal effect:
-    Send "{Numpad0}"
-}
-
 ;Some emojis 😂😏🙈🥰
 
-Numpad1::Send "😂"
+Numpad0::{
+    Send "😂"
+}
+
+Numpad1::Send "🙈"
 Numpad2::Send "😏"
-Numpad3::Send "🙈🥰"
+Numpad3::Send "🥰"
+NumpadDot::Send "😢"
+
+; Assigner une combinaison de touches à un emoji
+^#a::{ ; Ctrl + Win + A
+Send "😂"
+}
+
+^#b::{ ; 
+Send "🙈"
+}
+
+^#c::{ ; 
+Send "😏"
+}
+
+^#d::{ ; 
+Send "🥰"
+}
+
+^#e::{ ; 
+Send "😢"
+}
+
+^#f::{ ; 
+Send "✋👀🤚"
+}
+
+^#g::{ ; 
+Send "🙄"
+}
+
+^#h::{ ; 
+Send "😭"
+}
+
+^#i::{ ; 
+Send "😅"
+}
 
 
+;CS2
 
+^#j::{ ; 
+Send "¯\_(ツ)_/¯"
+}
+^#k::{ ; 
+Send "( -_•)▄︻テحكـ━一"
+}
+^#l::{ ; 
+Send "( ͡° ͜ʖ ͡°)"
+}
+^#m::{ ; 
+Send "(╯°□°）╯︵ ┻━┻"
+}
+^#n::{ ; 
+Send "ᕦ(ò_óˇ)ᕤ"
+}
+^#o::{ ; 
+Send "(⊙ _ ⊙ )"
+}
+^#p::{ ; 
+Send "UwU🥺👉👈"
+}
+^#q::{ ; 
+Send "🇫🇷⚜️ BAGUETTE"
+}
+^#r::{ ; 
+Send "если ты можешь это прочитать, то ты дерьмо"
+}
+
+
+#s::
+{
+    Run "..\minuterieVeille\minuterieVeille.bat"
+}
+
+#enter::
+{
+    Run "PowerShell -ExecutionPolicy Bypass -File ..\audioSwitcher\audioSwitcher.ps1"
+}
+
+/*
 NumpadSub::
 {
     DetectHiddenWindows false
@@ -115,6 +138,10 @@ NumpadSub::
     MsgBox "The text is:`n" WinGetTitle(Page)
     
 }
+*/
+
+
+
 
 
 ; Easy Window Dragging
@@ -160,3 +187,26 @@ EWD_MoveWindow(*)
         EWD_MouseStartY := EWD_MouseY
     }
 }
+
+
+/*
+Dans Fusion 360
+Les trois touches du haut à droite son respectivement f2 f3 et f4 
+Avec le clic gauche elle font le pan, le zoom et l'orbit
+*/
+#Hotif WinActive("ahk_exe Fusion360.exe")
+NumpadSub::f4
+NumpadAdd::f2
+XButton1::Send "^z"
+XButton2:: Send "{LShift Down}{MButton Down}"
+XButton2 Up:: Send "{LShift Up}{MButton Up}"
+#Hotif
+
+/*
+Dans UltiMaker-Cura.exe
+*/
+#Hotif WinActive("ahk_exe UltiMaker-Cura.exe")
+XButton1::Send "^z"
+XButton2:: Send "{RButton Down}"
+XButton2 Up:: Send "{RButton Up}"
+#Hotif
