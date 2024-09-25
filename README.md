@@ -1,7 +1,8 @@
 # PicoPad 
 with <3 by m1tch
 
-
+![Description de l'image](Images/IMG_20240910_170259.jpg)
+![Description de l'image](Images/IMG_20240902_144054.jpg)
 
 Ce projet combine un microcontrôleur utilisant **CircuitPython** avec **AutoHotkey** pour contrôler des fonctionnalités multimédia ou envoyer des émojis à l’aide de boutons physiques. En connectant plusieurs boutons à un microcontrôleur, chaque bouton peut déclencher une action, comme changer le volume, contrôler la lecture de médias ou envoyer des raccourcis clavier. Le script **AutoHotkey** intercepte ces raccourcis pour exécuter des commandes précises, comme envoyer des émojis dans vos applications.
 
