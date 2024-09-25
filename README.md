@@ -30,7 +30,7 @@ Les boutons, l'écran OLED et l'encodeur rotatif sont configurés dès le démar
 
 ```python
 # Initialisation des boutons sur GPIO
-pins = [board.GP2, board.GP3, board.GP4, board.GP7, board.GP6, board.GP5, board.GP8, board.GP9, board.GP10]
+pins = [board.GP2, board.GP3, board.GP4, board.GP5, board.GP6, board.GP7, board.GP8, board.GP9, board.GP10]
 switches = [DigitalInOut(pin) for pin in pins]
 for switch in switches:
     switch.direction = Direction.INPUT
