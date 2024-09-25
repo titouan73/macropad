@@ -10,6 +10,10 @@
 - Ampoule incandescant 5V
 
 ## Assemblage
+
+Voici les étapes d'assemblage à partir des pièces imprimées en 3d et disponibles dans le dossier 3dPrint.
+![alt text](image.png)
+
 1. Souder les risers pour le RaspberryPI PICO
 ![Description de l'image](../Images/IMG_20240912_13462115.jpg)
 
@@ -40,3 +44,17 @@
 
 ### Voilà c'est terminé ! 
 ![Description de l'image](../Images/IMG_20240910_165745.jpg)
+
+## Circuit Imprimé (PCB)
+
+Je ne vais pas rentrer trop précisément dans les détails électroniques de la confection de ce PCB car nous sommes en bas voltages et ainsi les erreures de sont pas très graves. De plus énormément de tutoriels sont présents sur internet.
+
+Voici les deux schémas : 
+![Dessous](pcb_bottom.png)
+![Dessus](pcb_top.png)
+
+Et le schéma fonctionnel : 
+
+![alt](schematic.png)
+
+> Pour toute question vous pouvez me contacter à l'adresse titouanfontaine@hackmedaddy.fr

@@ -13,6 +13,8 @@ Ce projet combine un microcontrôleur utilisant **CircuitPython** avec **AutoHot
 - Un écran OLED optionnel pour afficher les pages d’actions.
 - **AutoHotkey** installé sur l'ordinateur pour interpréter les combinaisons de touches envoyées.
 
+> Pour connaitre les instructions de montage et de fabrication du PCB rdv dans le dossier Build
+
 ---
 
 ### 1. Fonctionnement du script CircuitPython
@@ -143,3 +145,5 @@ Vous pouvez étendre ce script en ajoutant plus de combinaisons de touches pour 
 Ce projet est un excellent exemple d'intégration entre un microcontrôleur programmable avec **CircuitPython** et l’automatisation sur PC avec **AutoHotkey**. Vous pouvez facilement personnaliser les actions des boutons pour contrôler des fonctionnalités multimédia, envoyer des émojis ou exécuter d'autres actions dans vos applications.
 
 Le microcontrôleur se comporte comme un clavier HID, et AutoHotkey sert de pont pour interpréter ces commandes de manière flexible. Vous pouvez étendre ce projet en ajoutant des pages supplémentaires, des commandes complexes, ou en affichant des informations plus avancées sur l’écran OLED.
+
+> Pour connaitre les instructions de montage et de fabrication du PCB rdv dans le dossier Build
