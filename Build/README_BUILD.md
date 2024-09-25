@@ -15,34 +15,43 @@ Voici les étapes d'assemblage à partir des pièces imprimées en 3d et disponi
 ![alt text](image.png)
 
 1. Souder les risers pour le RaspberryPI PICO
+
 ![Description de l'image](../Images/IMG_20240912_13462115.jpg)
 
 2. Souder l'EC11 et les resistances
+
 ![Description de l'image](../Images/IMG_20240910_163232.jpg)
 ![Description de l'image](../Images/IMG_20240910_163727.jpg)
 
 3. Clipser les switchs sur la partie haute de la case
+
 ![Description de l'image](../Images/IMG_20240912_13463958.jpg)
 ![Description de l'image](../Images/IMG_20240910_163957.jpg)
 
 
 4. Placer la partie supérieur de la case et souder les switch sur le PCB
+
 ![Description de l'image](../Images/IMG_20240912_13465054.jpg)
 
 5. Souder le raspberry pico sur le PCB
+
 ![Description de l'image](../Images/IMG_20240910_164720.jpg)
 
 6. Souder la lampe à filament sur le PCB
+
 ![Description de l'image](../Images/IMG_20240910_165334.jpg)
 
 7. Flasher le Raspberry pico avant de refermer la case
+
 ![Description de l'image](../Images/IMG_20240910_170120.jpg)
 
 8. Refermer la case et placer les keycaps
+
 ![Description de l'image](../Images/IMG_20240910_165454.jpg)
 ![Description de l'image](../Images/IMG_20240910_165650.jpg)
 
 ### Voilà c'est terminé ! 
+
 ![Description de l'image](../Images/IMG_20240910_165745.jpg)
 
 ## Circuit Imprimé (PCB)
